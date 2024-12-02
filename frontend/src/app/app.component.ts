@@ -1,13 +1,13 @@
 import { Component } from "@angular/core";
 import { RouterOutlet } from "@angular/router";
+import { CoreModule } from "./core/core.module";
 
 @Component({
     selector: "app-root",
-    standalone: true,
-    imports: [RouterOutlet],
-    templateUrl: "./app.component.html",
+    imports: [RouterOutlet, CoreModule],
+    template: "<router-outlet />",
     styleUrl: "./app.component.scss",
 })
 export class AppComponent {
-    title = "frontend";
+    title = "Masters Project";
 }
