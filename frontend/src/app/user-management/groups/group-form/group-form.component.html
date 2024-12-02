@@ -1,0 +1,19 @@
+<mat-dialog-content>
+    <mat-form-field appearance="fill">
+        <mat-label>Назва</mat-label>
+        <input matInput [(ngModel)]="name" />
+    </mat-form-field>
+    
+    <mat-form-field appearance="fill">
+        <mat-label>Користувачи</mat-label>
+        <mat-select [(ngModel)]="users" multiple>
+            <mat-option *ngFor="let user of availableUsers()" [value]="user.id">{{user.name}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+    
+    <mat-dialog-actions>
+        <button mat-raised-button color="primary" (click)="add()">
+            Create Group
+        </button>
+    </mat-dialog-actions>
+</mat-dialog-content>

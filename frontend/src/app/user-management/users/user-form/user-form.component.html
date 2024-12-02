@@ -1,0 +1,21 @@
+<h2 mat-dialog-title>Add User</h2>
+<mat-dialog-content>
+    <mat-form-field appearance="fill">
+        <mat-label>Name</mat-label>
+        <input matInput [(ngModel)]="user.name" />
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Email</mat-label>
+        <input matInput type="email" [(ngModel)]="user.email" />
+    </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button mat-button (click)="onCancel()">Cancel</button>
+    <button
+        mat-button
+        [disabled]="!user.name || !user.email"
+        (click)="onSave()"
+    >
+        Save
+    </button>
+</mat-dialog-actions>
