@@ -1,0 +1,34 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+    background-color: var(--mat-app-background-color);
+}
+
+mat-dialog-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-form {
+    &__container {
+        width: 312px;
+        max-width: calc(100vw - 16px);
+        padding: 12px;
+
+        background-color: var(--mat-sys-surface-container-high);
+        border-radius: 28px;
+
+        h2 {
+            text-align: center;
+        }
+
+        mat-dialog-actions {
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+}
