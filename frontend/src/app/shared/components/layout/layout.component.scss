@@ -1,0 +1,14 @@
+:host {
+    display: flex;
+}
+
+.mp-layout {
+    &__navigation-rail {
+        flex: 0 0 72px;
+    }
+
+    &__content {
+        flex: 1 1 auto;
+        padding: 12px;
+    }
+}
